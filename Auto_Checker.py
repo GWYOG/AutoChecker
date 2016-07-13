@@ -85,7 +85,7 @@ def main():
     print_log(log,"[Starting decompiling...]")
     for file_name in inputdir_list:
         if file_name.find('.')!=-1 and file_name.rsplit('.',1)[1]=="jar":
-            status = os.system("java -jar fernflower-2.0-SNAPSHOT.jar " + file_name + " ./output")
+            status = os.system("java -jar fernflower-2.0-SNAPSHOT.jar ./input/" + file_name + " ./output")
             if status!=0:
                 print_log("Error: Failed to decomile " + file_name)
                 print_log("Script ends with -1")
